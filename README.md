@@ -72,15 +72,15 @@ pip install pandas scikit-learn matplotlib seaborn
 ### Running the Code
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Email-Classification-Naive-Bayes.git
+   https://github.com/Hammadarshad026/Artificial-intelligence-project-NB-Mail-Classifier.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd Email-Classification-Naive-Bayes
+   cd Artificial-intelligence-project-NB-Mail-Classifier
    ```
 3. Open the Jupyter notebook:
    ```bash
-   jupyter notebook classifyEmails_NB_simple.ipynb
+   jupyter notebook Email-classifer.ipynb
    ```
 4. Run the notebook cells sequentially to execute the code.
 
