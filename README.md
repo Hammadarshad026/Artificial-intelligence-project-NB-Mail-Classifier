@@ -1,115 +1,104 @@
-
 # Email Classification using Naive Bayes
 
 ## Overview
-This project is a machine learning-based solution for classifying emails into two categories: **spam** and **ham** (non-spam). The classification model is built using the **Naive Bayes** algorithm, a probabilistic machine learning method commonly used for text classification tasks. The goal is to train the model on a labeled dataset of emails and use it to predict the category of new, unseen emails.
+This project is designed to classify emails as either **spam** or **ham** (not spam). It uses a **Naive Bayes** model trained on a dataset of email messages. The system predicts whether an input email is spam or legitimate based on the content.  
+
+Additionally, it includes a fun and interactive user interface in the command line using ASCII art and colors to display results.
+
+---
 
 ## Table of Contents
-- [Project Description](#project-description)
+- [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Dataset](#dataset)
+- [How the System Works](#how-the-system-works)
+  - [File Descriptions](#file-descriptions)
+  - [Model Usage](#model-usage)
 - [How to Run the Project](#how-to-run-the-project)
-- [File Structure](#file-structure)
-- [Model Explanation](#model-explanation)
+- [Screenshots](#screenshots)
+- [Future Enhancements](#future-enhancements)
 - [License](#license)
 
 ---
 
-## Project Description
-
-This project uses **Naive Bayes** for classifying emails into **spam** or **ham** categories. The dataset used for training is from Kaggle, containing labeled email messages with their corresponding categories. The entire process includes:
-1. **Data Preprocessing**: Cleaning and transforming the email text into a format suitable for model training.
-2. **Feature Extraction**: Converting the text data into numerical vectors using techniques like Bag-of-Words or TF-IDF.
-3. **Model Training**: Using the preprocessed data to train a Naive Bayes model.
-4. **Prediction**: Classifying new email messages as spam or ham based on the trained model.
-5. **Evaluation**: Assessing the model's performance using accuracy and other metrics.
+## Features
+- **Text Classification**: Classifies emails into spam or ham categories using a trained Naive Bayes model.
+- **Preprocessing**: A `text_formatter.py` script ensures input text is clean and formatted properly for analysis.
+- **Interactive Output**: Displays results using visually appealing ASCII art and colored text.
+- **User-Friendly Design**: Straightforward and easy-to-use command-line interface.
 
 ---
 
 ## Technologies Used
+- **Python**: Programming language for building and implementing the system.
+- **Scikit-learn**: For training and using the Naive Bayes classification model.
+- **pandas**: For handling and preprocessing the dataset.
+- **pickle**: To save and load the trained model and vectorizer.
+- **pyfiglet**: For creating ASCII art to display interactive outputs.
+- **termcolor**: For adding color to the terminal outputs.
+- **Jupyter Notebook**: For developing and training the model.
+- **Windows 10**: Operating system for development.
 
-- **Python**: The primary programming language used for this project.
-- **Jupyter Notebook**: For interactive development and testing of the code.
-- **Scikit-learn**: For implementing the Naive Bayes classifier and other machine learning utilities.
-- **Pandas**: For data manipulation and preprocessing.
-- **Matplotlib/Seaborn**: For data visualization and model evaluation.
-- **VSCode**: The code editor used for writing and testing the Python code.
-- **Windows 10**: The operating system used for development.
+---
+
+## How the System Works
+
+### File Descriptions
+1. **`Email-classifer.ipynb`**:
+   - A Jupyter Notebook that contains code for training the Naive Bayes model.
+   - Produces the `trained_model.pkl` and `vectorizer.pkl` files, which are used later for predictions.
+
+2. **`text_formater.py`**:
+   - Contains the `reformat_text` function that formats and cleans the input email text.
+   - Ensures unnecessary whitespace, extra line breaks, and punctuation inconsistencies are resolved.
+
+3. **`model.py`**:
+   - A command-line program that:
+     - Loads the saved Naive Bayes model and vectorizer.
+     - Accepts user input (an email message) and reformats it using `text_formatter.py`.
+     - Predicts whether the email is spam or ham.
+     - Displays the result using ASCII art and colorful text.
 
 ---
 
-## Dataset
+### Model Usage
 
-- **Source**: The dataset used in this project is available on [Kaggle](https://www.kaggle.com).
-- **Structure**: The dataset consists of two columns:
-  - **Category**: Contains the label for each email, either "spam" or "ham".
-  - **Message**: Contains the actual email text.
-- **Size**: The dataset consists of 5,572 entries, with a distribution of 4,825 ham (non-spam) and 747 spam messages.
-  
-### Data Preprocessing
-- Text normalization (lowercasing, removal of stopwords, and punctuation).
-- Tokenization and vectorization using techniques like **Bag-of-Words** and **TF-IDF**.
-
----
+To see how the system works, run **`model.py`** in your terminal. Here's a breakdown of what happens:
+1. A welcome banner **`HAMMAD`** is displayed in ASCII art.
+2. The user enters an email message.
+3. The system processes the input, predicts if it's spam or ham, and displays the result interactively.
 
 ## How to Run the Project
 
 ### Prerequisites
-Before running the project, ensure that you have the following installed:
+Make sure you have the following installed:
 - Python 3.x
-- Jupyter Notebook (or any compatible IDE)
-- Required Python libraries:
-  - `pandas`
-  - `scikit-learn`
-  - `matplotlib`
-  - `seaborn`
+- Required libraries:
+  ```bash
+  pip install pandas scikit-learn pickle pyfiglet termcolor
+  ```
 
-You can install the required libraries using `pip`:
-```bash
-pip install pandas scikit-learn matplotlib seaborn
-```
-
-### Running the Code
+### Steps to Run
 1. Clone the repository:
    ```bash
-   https://github.com/Hammadarshad026/Artificial-intelligence-project-NB-Mail-Classifier.git
+   git clone https://github.com/your-username/Email-Classification-Naive-Bayes.git
    ```
-2. Navigate to the project directory:
+2. Navigate to the project folder:
    ```bash
-   cd Artificial-intelligence-project-NB-Mail-Classifier
+   cd Email-Classification-Naive-Bayes
    ```
-3. Open the Jupyter notebook:
+3. Ensure the trained model and vectorizer files (`trained_model.pkl` and `vectorizer.pkl`) are in the project folder.
+4. Run `model.py`:
    ```bash
-   jupyter notebook Email-classifer.ipynb
+   python model.py
    ```
-4. Run the notebook cells sequentially to execute the code.
 
 ---
 
-## File Structure
+## Screenshots
+### Input and Output of the System:
+![image](https://github.com/user-attachments/assets/8c34c25c-ec09-4967-8302-a7131a956c44)
 
-The project contains the following files and folders:
-- **Email-classifer.ipynb**: The main Jupyter notebook file containing the project code.
-- **dataset.csv**: The email dataset used for training the model (you can upload the dataset from Kaggle and name it as `dataset.csv`).
-- **README.md**: This file.
-
----
-
-## Model Explanation
-
-### Naive Bayes Algorithm
-The Naive Bayes classifier is based on Bayes' Theorem and assumes that the presence of a word in an email is independent of the presence of other words. The model is trained by calculating the likelihood of each class (spam or ham) given the words in the email, and it predicts the class that has the highest probability.
-
-### Steps:
-1. **Data Preprocessing**: The email text is cleaned and tokenized into words. Stop words and punctuation are removed.
-2. **Feature Extraction**: The text data is converted into numerical features using the Bag-of-Words model or TF-IDF.
-3. **Model Training**: The Naive Bayes classifier is trained on the processed data, where the model learns to distinguish spam from ham.
-4. **Prediction**: Once trained, the model can classify new, unseen emails into either spam or ham.
 
 
 ## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
