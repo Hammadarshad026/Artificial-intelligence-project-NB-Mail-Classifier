@@ -96,7 +96,8 @@ Make sure you have the following installed:
 
 ## Screenshots
 ### Input and Output of the System:
-![image](https://github.com/user-attachments/assets/8c34c25c-ec09-4967-8302-a7131a956c44)
+![image](https://github.com/user-attachments/assets/15d7cfa3-be71-4397-ad4a-f91288f96b41)
+
 
 
 
