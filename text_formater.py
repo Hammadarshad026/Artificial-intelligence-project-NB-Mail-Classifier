@@ -7,7 +7,7 @@ def reformat_text(input_text):
 
 # # Input text
 # input_text = """MAKE MONEY FAST!!!
-# Click this link to claim your FREE gift: https://www.sotwe.com/fakehostell
+# Click this link to claim your FREE gift: https://www.sotwe.com/fakecurrency
 
 # You've been selected for a limited-time offer! Don't miss out!
 
