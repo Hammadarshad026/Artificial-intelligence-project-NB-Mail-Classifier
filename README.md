@@ -80,11 +80,11 @@ Make sure you have the following installed:
 ### Steps to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Email-Classification-Naive-Bayes.git
+   https://github.com/Hammadarshad026/Artificial-intelligence-project-NB-Mail-Classifier.git
    ```
 2. Navigate to the project folder:
    ```bash
-   cd Email-Classification-Naive-Bayes
+   cd Artificial-intelligence-project-NB-Mail-Classifier
    ```
 3. Ensure the trained model and vectorizer files (`trained_model.pkl` and `vectorizer.pkl`) are in the project folder.
 4. Run `model.py`:
